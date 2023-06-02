@@ -4,7 +4,7 @@ const rout= require('./config/route')
 const dotenv= require('dotenv').config();
  const dbConnection = require('./config/dbconnection')
 
-const port = process.env.PORT;
+
 app.use(express.json());
 
 app.use(express.urlencoded({extended:true}));
@@ -13,7 +13,7 @@ app.use(express.static('public'))
 app.use(rout);
 
  dbConnection();
-
+const port= process.env.PORT
 app.listen(port, (req,res)=> {
   
     console.log('connected the port');
