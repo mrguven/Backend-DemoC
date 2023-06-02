@@ -1,6 +1,8 @@
 const moment = require('moment/moment');
 const mongoose = require('mongoose');
 
+
+
 const Feed =mongoose.Schema({
     Name:{
         type:String,
@@ -26,7 +28,7 @@ const Feed =mongoose.Schema({
 }, {timestamps:true})
 
 
-const FeedModel = mongoose.model('Comment',Feed);
+const FeedModel = mongoose.model('Feed',Feed);
 
 
 
