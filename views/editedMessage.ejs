@@ -11,13 +11,13 @@
 
     <%- include('./partials/nav.ejs') -%>
 
-    <form action="/updateComment/<%=blog._id%>" method="post">
+    <form action="/updateMessage/<%=message._id%>" method="post">
         <h2>Post a message</h2>
         <div>
             <h3>Title</h3>
-        <input type="text" name="Name" id="userName"  value=" <%= blog.Name %> "style="margin-bottom:15px ;">
+        <input type="text" name="Name" id="userName"  value=" <%= message.Name %> "style="margin-bottom:15px ;">
     </div>
-        <textarea type="text" name='Message'  style="width: 20%;"><%= blog.Message %></textarea>
+        <textarea type="text" name='Message'  style="width: 20%;"><%= message.Message %></textarea>
 
        
         
