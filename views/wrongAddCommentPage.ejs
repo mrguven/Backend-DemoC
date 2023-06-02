@@ -13,7 +13,7 @@
 
 
 
-    <form action="/sendComment" method="post">
+    <form action="/sendMessage" method="post">
         <h2>Post a message</h2>
         <div>
             <h3>Title</h3>
@@ -24,7 +24,7 @@
                     <% } %>
     </div>
         <textarea type="text" name='Message' rows=9 minlength=100
-              placeholder="write comment"  style="width: 20%;"    ></textarea>
+              placeholder="write Message"  style="width: 20%;"    ></textarea>
            <br>
               <% if (err1){ %>
                 <i><%= err1['Message']  %></i>

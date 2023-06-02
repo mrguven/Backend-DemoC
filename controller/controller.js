@@ -68,7 +68,8 @@ const getFeedPage = (req,res) =>{
     const updateMessage=(req,res)=> {
     
         FeedModel.findByIdAndUpdate(req.params.id,req.body,{new: true})
-        .then((result)=> res.render('feed', {message:result})).catch(()=> res.render('404'))
+        .then((result)=> res.render('fullMessage', {message:result})).catch(()=> res.render('404'))
+       
         
     
     }
