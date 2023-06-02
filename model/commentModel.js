@@ -15,15 +15,7 @@ const Feed =mongoose.Schema({
     maxlength:40
     },
 
-    updated_at: {
-
-         type: Date, required: true, default: Date.now ,
-        get: (updatedAt)=> {
-            const date = new moment(updatedAt);
-            return date.format('D/MM/YYYY  h:mm:ss a')
-        }
-
-    },
+   
 
 }, {timestamps:true})
 
