@@ -12,33 +12,11 @@
     </head>
     <body>
     
-           
-        
-      
-            
+                  
     
         <%- include('./userComment.ejs') -%>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-    
-          
-        
+       
         <% message.forEach(function (user) { %>
             <div id="border">
             
@@ -46,18 +24,8 @@
                          <h2 id="userName"> <b>Name:</b> <%= user.Name %></h2>
                     <a href="/fullMessage/<%= user._id %>">  <h4  id="name">  <b>Message:</b> <%= user.Message %> </h4></a>
     
-                      
-    
-                    
                     <b id="time"> <%= user.updated_at %></b>
-    
-    
-    
-                        
-    
-                    
-                 
-                    </div>
+                        </div>
                  <a href="/fullMessage/<%= user._id %>">see more...</a>
     </div>
         <% }) %> 
