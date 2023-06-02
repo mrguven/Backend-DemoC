@@ -9,15 +9,15 @@
 </head>
 <body>
     <%- include('./partials/nav.ejs') -%>
-
+<div id="form">
     <form action="/sendMessage" method="post">
         <h2>Write a message</h2>
         <div>
             <h3>Name</h3>
-        <input type="text" name="Name" id="userName" minlength=25  placeholder="Name" style="margin-bottom:15px ;">
+        <input type="text" name="Name" id="userName"  placeholder="Name" style="margin-bottom:15px ;">
        
     </div>
-        <textarea type="text" name='Message' rows=9 minlength=100
+        <textarea type="text" name='Message' rows=9 
               placeholder="write Message"  style="width: 30%;"    ></textarea>
             
         <br>
@@ -25,7 +25,7 @@
     
     </form>
 
-
+</div>
 
   
 

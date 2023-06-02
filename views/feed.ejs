@@ -13,12 +13,11 @@
     <body>
     
            
-       
+        
       
             
     
         <%- include('./userComment.ejs') -%>
-
 
 
 
@@ -46,7 +45,7 @@
     
             <%    }%> -->
     
-    
+          
         
         <% message.forEach(function (user) { %>
             <div id="border">
@@ -58,7 +57,7 @@
                       
     
                     
-                    <b> <%= user.updated_at %></b>
+                    <b id="time"> <%= user.updated_at %></b>
     
     
     

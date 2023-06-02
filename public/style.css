@@ -8,7 +8,7 @@ color: rgb(123, 123, 197);
 }
 
 #border {
-   
+   padding: 20px;
     margin: 10px;
     width: 70%;
 }
@@ -19,12 +19,19 @@ color: rgb(123, 123, 197);
 }
 
 #commentBorder:hover {
-    background-color: rgb(44, 153, 216);
+    background-color: rgb(218, 221, 255);
 }
 
 .navigationWrapper{
     width: 100%;
     background-color: aliceblue;
+    margin: 10px;
+}
+.navigationWrapper h1 {
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: oblique;
+    color: blue;
 }
 
 .parent {
@@ -42,7 +49,7 @@ color: rgb(123, 123, 197);
 }
 .parent :hover {
     
-    background-color: rgb(195, 195, 238);
+    background-color: rgb(223, 223, 224);
    
 }
 
@@ -58,3 +65,10 @@ color: rgb(123, 123, 197);
     z-index: -1;
 }
 
+#time {
+    color: rgb(169, 210, 236);
+}
+
+#form {
+    color: rgb(117, 76, 0);
+}

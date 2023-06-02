@@ -7,12 +7,12 @@ const Feed =mongoose.Schema({
     Name:{
         type:String,
         required:true,
-        minlength:25
+        maxlength:15
     },
     Message:{
     type:String,
     required:true,
-    minlength:100
+    maxlength:40
     },
 
     updated_at: {
