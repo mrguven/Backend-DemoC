@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>fullarticle</title>
+    
+</head>
+<body>
+
+    <%- include('./partials/nav.ejs') -%>
+   
+        <div id="border">
+        
+            <div id="commentBorder">
+                     <h2 id="userName"><%= blog.Name %></h2>
+                  <h4  id="name">  <%= blog.Message %> </h4>
+             </div>
+            
+        </div>
+
+        <form action="/deleteUser/<%=blog._id%>" method="post">
+
+            <button>delete Post</button>
+
+        </form>
+    
+  <a href="/editMessage/<%=blog._id %>" > Edit Article</a>
+  
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+#userName {
+    text-shadow: 4px;
+}
+
+#name {
+font-style: italic;
+color: rgb(123, 123, 197);
+}
+
+#border {
+   
+    margin: 10px;
+    width: 70%;
+}
+
+#commentBorder {
+    border: 2px;
+    border-style: groove;
+}
+
+#commentBorder:hover {
+    background-color: bisque;
+}
+
+.navigationWrapper{
+    width: 100%;
+    background-color: aliceblue;
+}
+
+.parent {
+    display:inline-block;
+    margin-left: 5%;
+    padding: 10px;
+}
+
+
+.parent a {
+    text-decoration: none;
+    font-family: fantasy;
+    
+   
+}
+.parent :hover {
+    
+    background-color: rgb(195, 195, 238);
+   
+}
+
+#makeComment {
+    position: absolute;
+    right: 400px;
+}
+
+#welcome {
+    width: 100%;
+    height: 20%;
+    opacity: 0.5;
+    z-index: -1;
+}
+
