@@ -7,7 +7,7 @@ const {getHomePage,getFeedPage,sendMessage,getFullMessage,
 
 router.get('/', getHomePage);
 
-router.get('/feed',getFeedPage)
+router.get('/feed',getFeedPage);
 
 router.post('/sendMessage', sendMessage);
 router.get('/fullMessage/:id', getFullMessage);
@@ -16,8 +16,8 @@ router.get('/editMessage/:id', getEditeditMessage);
 
 router.post('/deleteUser/:id', deleteUser);
 
-router.post('/updateMessage/:id', updateMessage)
+router.post('/updateMessage/:id', updateMessage);
 
 
 
-module.exports= router
+module.exports= router;

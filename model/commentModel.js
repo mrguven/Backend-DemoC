@@ -20,7 +20,7 @@ const Feed =mongoose.Schema({
          type: Date, required: true, default: Date.now ,
         get: (updatedAt)=> {
             const date = new moment(updatedAt);
-            return date.format('D/MM/YYYY  h:mm:ss a') // it needs to make beter. when we update the post, the time should be updated.
+            return date.format('D/MM/YYYY  h:mm:ss a')
         }
 
     },
