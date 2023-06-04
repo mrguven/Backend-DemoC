@@ -1,5 +1,6 @@
 const express = require('express');
-const FeedModel = require('../model/commentModel')
+const FeedModel = require('../model/commentModel');
+const { error } = require('jquery');
 
 
 
@@ -11,15 +12,13 @@ const getHomePage =(req,res) => {
 const sendMessage = (req,res)=> {
    const message= new FeedModel(req.body )
            
-   if(req.body==='') {
-    res.res.render('feed', {err1: {nameError:'you shoul write name',messageError:'you should write message'}})
-   }
-   else {
+  // how to get error message in feed.ejs. if we try to save data wrong.
+   
     console.log(req.body.Name);
         console.log(req.body.Message);
         message.save().then(()=>{res.status(200).redirect('/feed')})
-             .catch((err1)=> {res.render('usercomment', {err1: err1.errors})});
-        }
+             .catch((err1)=> res.render('userComment',{err1:err1.errors}) )
+        
 
    }
    
@@ -29,7 +28,9 @@ const sendMessage = (req,res)=> {
 const getFeedPage = (req,res) =>{
     FeedModel.find().sort({ createdAt: -1 })
                             .then((data)=> {res.render('feed', {message: data})}) 
-                            .catch(()=>res.render('404'))
+                            .catch(()=>res.render('404'));
+                            
+                            
 }
 
 
