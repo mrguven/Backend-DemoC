@@ -15,11 +15,15 @@
         <div>
             <h3>Name</h3>
         <input type="text" name="Name" id="userName"  placeholder="Name" style="margin-bottom:15px ;">
-       
+        <%   if(err1){ %>
+        <%= err1['Name']%>
+        <%  }%>
     </div>
         <textarea type="text" name='Message' rows=9 
               placeholder="write Message"  style="width: 30%;"    ></textarea>
-            
+              <%  if(err1){%>
+              <%= err1['Message']%>
+              <%  }%>
         <br>
         <button type="submit"  >Post a message</button>
     

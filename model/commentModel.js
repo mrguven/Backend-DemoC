@@ -1,6 +1,6 @@
 const moment = require('moment/moment');
 const mongoose = require('mongoose');
-
+mongoose.set('runValidators', true);
 
 
 const Feed =mongoose.Schema({

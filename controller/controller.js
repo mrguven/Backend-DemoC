@@ -9,13 +9,21 @@ const getHomePage =(req,res) => {
 }
 
 const sendMessage = (req,res)=> {
-   const message= new FeedModel(req.body
-            )
-        console.log(req.body.Name);
+   const message= new FeedModel(req.body )
+           
+   if(req.body==='') {
+    res.res.render('feed', {err1: {nameError:'you shoul write name',messageError:'you should write message'}})
+   }
+   else {
+    console.log(req.body.Name);
         console.log(req.body.Message);
         message.save().then(()=>{res.status(200).redirect('/feed')})
-             .catch((err1)=> {res.render('wrongAddCommentPage', {err1: err1.errors})});
+             .catch((err1)=> {res.render('usercomment', {err1: err1.errors})});
         }
+
+   }
+   
+        
 
 
 const getFeedPage = (req,res) =>{
@@ -51,7 +59,8 @@ const getFeedPage = (req,res) =>{
 
     const updateMessage=(req,res)=> {
         FeedModel.findByIdAndUpdate(req.params.id,req.body,{new: true})
-        .then((result)=> res.render('fullMessage', {message:result})).catch(()=> res.render('404'))    
+        .then((result)=> res.render('fullMessage', {message:result}))
+        .catch((err1)=> {res.render('wrongAddCommentPage', {err1: err1.errors})})    
      }
 
      
